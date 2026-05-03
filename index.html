@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Prajwal Auti — Management Head, VedPad Education Shirur</title>
+<meta name="description" content="Prajwal Dattatray Auti — Management Head at VedPad Education, Shirur. 4+ years experience in computer training, MS-CIT, AI tools and career guidance." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+  :root{
+    --background:#fbfcfe; --foreground:#0f1729; --card:#ffffff;
+    --primary:#1862ed; --primary-foreground:#ffffff; --primary-glow:#4ea3ff;
+    --secondary:#eef3fa; --secondary-foreground:#0f1729;
+    --muted:#eef3fa; --muted-foreground:#64748b;
+    --accent:#0ea5e9; --success:#22c55e; --border:#e2e8f0;
+    --radius:1rem;
+    --gradient-hero:linear-gradient(135deg,#eef5ff 0%,#e0ecff 50%,#e0f5ff 100%);
+    --gradient-primary:linear-gradient(135deg,#1862ed,#0ea5e9);
+    --gradient-card:linear-gradient(145deg,#fff 0%,#f6faff 100%);
+    --shadow-soft:0 4px 20px -4px rgba(24,98,237,.08);
+    --shadow-card:0 8px 30px -8px rgba(24,98,237,.12);
+    --shadow-elegant:0 20px 50px -12px rgba(24,98,237,.25);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--foreground);background:var(--background);line-height:1.6}
+  h1,h2,h3,h4{font-family:'Plus Jakarta Sans','Inter',sans-serif;letter-spacing:-.02em;line-height:1.15}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;border-radius:9999px;padding:.65rem 1.25rem;font-size:.9rem;transition:all .25s ease;border:1px solid transparent;cursor:pointer}
+  .btn-lg{padding:.85rem 1.75rem;font-size:1rem;height:48px}
+  .btn-primary{background:var(--primary);color:#fff;box-shadow:var(--shadow-soft)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-elegant)}
+  .btn-outline{background:#fff;border-color:var(--border);color:var(--foreground)}
+  .btn-outline:hover{border-color:var(--primary);color:var(--primary)}
+  .btn-secondary{background:#fff;color:var(--primary)}
+  .btn-success{background:var(--success);color:#fff}
+  .btn-success:hover{background:#16a34a}
+  .icon{width:18px;height:18px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(251,252,254,.8);border-bottom:1px solid rgba(226,232,240,.6)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+  .logo{display:flex;align-items:center;gap:.6rem;font-weight:700;font-size:1.1rem}
+  .logo-mark{width:36px;height:36px;border-radius:.85rem;background:var(--gradient-primary);display:flex;align-items:center;justify-content:center;color:#fff}
+  .nav-links{display:none;gap:2rem;font-size:.9rem;font-weight:500;color:var(--muted-foreground)}
+  .nav-links a:hover{color:var(--primary)}
+  @media(min-width:768px){.nav-links{display:flex}}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;background:var(--gradient-hero)}
+  .hero-blob{position:absolute;width:380px;height:380px;border-radius:50%;filter:blur(80px);opacity:.3;pointer-events:none}
+  .hero-blob.b1{top:-120px;right:-120px;background:var(--gradient-primary)}
+  .hero-blob.b2{bottom:-120px;left:-120px;background:var(--accent);opacity:.2}
+  .hero-grid{position:relative;display:grid;grid-template-columns:1fr;gap:3rem;align-items:center;padding:4rem 0}
+  @media(min-width:768px){.hero-grid{grid-template-columns:1fr 1fr;padding:6rem 0}}
+  .photo-wrap{position:relative;justify-self:center}
+  .photo-bg{position:absolute;inset:0;border-radius:2rem;background:var(--gradient-primary);transform:rotate(3deg)}
+  .photo{position:relative;border-radius:2rem;width:18rem;max-width:100%;object-fit:cover;box-shadow:var(--shadow-elegant)}
+  @media(min-width:640px){.photo{width:20rem}}
+  @media(min-width:768px){.photo{width:100%;max-width:26rem}}
+  .badge-card{position:absolute;bottom:-1.25rem;right:-.75rem;background:#fff;border-radius:1rem;padding:.75rem 1rem;box-shadow:var(--shadow-card);display:flex;align-items:center;gap:.75rem}
+  .badge-icon{width:40px;height:40px;border-radius:.85rem;background:var(--gradient-primary);display:flex;align-items:center;justify-content:center;color:#fff}
+  .badge-card .small{font-size:.7rem;color:var(--muted-foreground)}
+  .badge-card .big{font-weight:700;font-size:.85rem}
+
+  .hero-content{text-align:center}
+  @media(min-width:768px){.hero-content{text-align:left}}
+  .pill{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem 1rem;background:#fff;border-radius:9999px;box-shadow:var(--shadow-soft);font-size:.85rem;font-weight:500;color:var(--primary);margin-bottom:1.5rem}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--success);animation:pulse 1.8s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+  .hero h1{font-size:2.4rem;font-weight:800;margin-bottom:1.25rem}
+  @media(min-width:640px){.hero h1{font-size:3rem}}
+  @media(min-width:768px){.hero h1{font-size:3.6rem}}
+  .accent{color:var(--primary)}
+  .grad-text{background:var(--gradient-primary);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{font-size:1.05rem;color:var(--muted-foreground);margin-bottom:2rem;max-width:34rem}
+  @media(max-width:767px){.hero p{margin-left:auto;margin-right:auto}}
+  .cta-row{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+  @media(min-width:768px){.cta-row{justify-content:flex-start}}
+
+  /* Sections */
+  section{padding:5rem 0}
+  @media(min-width:768px){section{padding:7rem 0}}
+  .section-head{text-align:center;margin-bottom:3rem}
+  .eyebrow{font-size:.8rem;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:.1em}
+  .section-head h2{font-size:1.85rem;font-weight:700;margin-top:.5rem}
+  @media(min-width:768px){.section-head h2{font-size:2.4rem}}
+  .max-5xl{max-width:1024px;margin:0 auto;padding:0 1.5rem}
+  .max-6xl{max-width:1152px;margin:0 auto;padding:0 1.5rem}
+  .max-4xl{max-width:896px;margin:0 auto;padding:0 1.5rem}
+
+  /* Cards */
+  .card{background:var(--gradient-card);border-radius:1.5rem;padding:2rem;box-shadow:var(--shadow-soft);transition:all .3s ease}
+  .card:hover{box-shadow:var(--shadow-card);transform:translateY(-4px)}
+  .card-lg{padding:3rem;border-radius:1.75rem;box-shadow:var(--shadow-card)}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr;gap:2rem;align-items:center}
+  @media(min-width:768px){.about-grid{grid-template-columns:2fr 1fr}}
+  .about-grid p{margin-bottom:1rem;color:var(--muted-foreground)}
+  .about-grid p strong{color:var(--primary)}
+  .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem}
+  .tag{padding:.35rem .85rem;border-radius:9999px;background:var(--secondary);font-size:.85rem;font-weight:500}
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .stat{text-align:center;padding:1rem;border-radius:1rem;background:#fff;box-shadow:var(--shadow-soft)}
+  .stat .v{font-size:1.5rem;font-weight:700;color:var(--primary)}
+  .stat .l{font-size:.75rem;color:var(--muted-foreground);margin-top:.25rem}
+
+  /* Mission / Expertise grids */
+  .grid-3{display:grid;grid-template-columns:1fr;gap:1.5rem}
+  @media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+  .grid-4{display:grid;grid-template-columns:1fr;gap:1.5rem}
+  @media(min-width:640px){.grid-4{grid-template-columns:1fr 1fr}}
+  @media(min-width:1024px){.grid-4{grid-template-columns:repeat(4,1fr)}}
+  .mission-icon{width:56px;height:56px;border-radius:1rem;background:var(--gradient-primary);display:flex;align-items:center;justify-content:center;color:#fff;margin-bottom:1.25rem}
+  .mission-icon .icon{width:28px;height:28px}
+  .mission-card h3{font-size:1.2rem;font-weight:700;margin-bottom:.5rem}
+  .mission-card p{color:var(--muted-foreground)}
+
+  .expertise-card{background:#fff;border:1px solid var(--border);border-radius:1.5rem;padding:1.5rem;box-shadow:var(--shadow-soft);transition:all .3s ease}
+  .expertise-card:hover{border-color:rgba(24,98,237,.3);box-shadow:var(--shadow-elegant)}
+  .ex-icon{width:48px;height:48px;border-radius:1rem;background:rgba(24,98,237,.1);color:var(--primary);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;transition:transform .3s}
+  .expertise-card:hover .ex-icon{transform:scale(1.1)}
+  .expertise-card h3{font-size:1.05rem;font-weight:700;margin-bottom:.4rem}
+  .expertise-card p{font-size:.875rem;color:var(--muted-foreground)}
+
+  /* USP */
+  .bg-soft{background:rgba(238,243,250,.5)}
+  .eyebrow {
+  font-size: 50px;
+  color: #0000ff;
+  font-weight: 900;}
+  .usp-grid{display:grid;grid-template-columns:1fr;gap:3rem;align-items:center}
+  @media(min-width:1024px){.usp-grid{grid-template-columns:1fr 1fr}}
+  .usp-item{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.25rem;border-radius:1rem;background:var(--gradient-card);box-shadow:var(--shadow-soft);margin-bottom:.75rem;transition:all .3s}
+  .usp-item:hover{box-shadow:var(--shadow-card)}
+  .usp-check{width:40px;height:40px;border-radius:.75rem;background:rgba(34,197,94,.1);color:var(--success);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .usp-item span{font-weight:500}
+
+  /* Contact */
+  .contact-card{position:relative;overflow:hidden;padding:3rem 2rem;border-radius:2rem;text-align:center;background:var(--gradient-primary);color:#fff}
+  @media(min-width:768px){.contact-card{padding:3.5rem}}
+  .contact-card .blob{position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.1);filter:blur(40px)}
+  .contact-card .blob.t{top:-80px;right:-80px}
+  .contact-card .blob.b{bottom:-80px;left:-80px}
+  .contact-card > .inner{position:relative}
+  .loc{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem 1rem;background:rgba(255,255,255,.15);border-radius:9999px;font-size:.85rem;font-weight:500;margin-bottom:1.25rem;backdrop-filter:blur(6px)}
+  .contact-card h2{font-size:1.85rem;font-weight:700;margin-bottom:.75rem}
+  @media(min-width:768px){.contact-card h2{font-size:2.8rem}}
+  .contact-card .lead{opacity:.9;font-size:1.05rem;margin-bottom:2rem;max-width:32rem;margin-left:auto;margin-right:auto}
+  .phone{display:inline-block;font-size:1.5rem;font-weight:700;letter-spacing:.05em;margin-bottom:2rem;transition:transform .25s}
+  @media(min-width:768px){.phone{font-size:1.9rem}}
+  .phone:hover{transform:scale(1.05)}
+
+  /* Footer */
+  footer{border-top:1px solid rgba(226,232,240,.6);padding:2rem 0;font-size:.875rem;color:var(--muted-foreground)}
+  .footer-row{display:flex;flex-direction:column;align-items:center;gap:.75rem;justify-content:space-between}
+  @media(min-width:768px){.footer-row{flex-direction:row}}
+  .foot-item{display:flex;align-items:center;gap:.5rem}
+  .foot-item .icon{width:16px;height:16px;color:var(--primary)}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="container nav">
+    <div class="logo">
+      <div class="logo-mark"><i data-lucide="graduation-cap"></i></div>
+      <span>Prajwal Auti</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#mission">Mission</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:8847788710" class="btn btn-primary"><i data-lucide="phone" class="icon"></i> Call</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-blob b1"></div>
+  <div class="hero-blob b2"></div>
+  <div class="container hero-grid">
+    <div class="photo-wrap">
+      <div class="photo-bg"></div>
+      <img src="Picture.png" alt="Prajwal Dattatray Auti, Management Head at VedPad Education" class="photo" />
+      <div class="badge-card">
+        <div class="badge-icon"><i data-lucide="award" class="icon"></i></div>
+        <div>
+          <div class="small">Experience</div>
+          <div class="big">3+ Years</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-content">
+      <div class="pill"><span class="dot"></span> Management Head — VedPad Education, Shirur</div>
+      <h1>Empowering <span class="accent">Students with </span>Practical <span class="accent">Skills</span></h1>
+      <p>3+ Years Experience in Computer Training. Helping students build real skills, real confidence and real careers.</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-primary btn-lg"><i data-lucide="phone" class="icon"></i> Contact Now</a>
+        <a href="#about" class="btn btn-outline btn-lg">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="max-5xl">
+    <div class="section-head">
+      <span class="eyebrow">About Me</span>
+      <h2>Focused on practical learning and real skill development</h2>
+    </div>
+    <div class="card card-lg">
+      <div class="about-grid">
+        <div>
+          <p style="font-size:1.1rem;color:var(--foreground)">I am <strong>Prajwal Dattatray Auti</strong> Management Head at VedPad Education, Shirur. With 3+ years of experience in computer training, I focus on practical learning that helps students build real skills and confidence.</p>
+          <p>As an MKCL Authorized Trainer, I ensure that students receive proper guidance based on the official syllabus along with hands-on learning. My approach is simple — not just teaching concepts, but helping students understand, apply, and grow with the right direction.</p>
+          <div class="tags">
+            <span class="tag">AI & Digital Skills Training</span>
+            <span class="tag">Management Head</span>
+            <span class="tag">Computer Trainer</span>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:30px;">
+  <img src="Google Workspace.bmp" alt="MKCL Certificate" style="width:250px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+  <p style="margin-top:10px; font-weight:bold;">
+    MKCL Authorized Trainer (Certified)
+  </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- Mission -->
+<section id="mission" class="bg-soft">
+  <div class="max-6xl">
+    <div class="section-head">
+      <span class="eyebrow">Vision & Mission</span>
+      <h2>What We Focus On</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card mission-card">
+        <div class="mission-icon"><i data-lucide="lightbulb" class="icon"></i></div>
+        <h3>Skill-based Learning</h3>
+        <p>We believe learning should go beyond theory. Our focus is on practical training that helps students understand concepts clearly and apply them in real-life situations. This approach ensures strong skill development and long-term retention.</p>
+      </div>
+      <div class="card mission-card">
+        <div class="mission-icon"><i data-lucide="sparkles" class="icon"></i></div>
+        <h3>Digital Literacy</h3>
+        <p>Empowering students to confidently use computers, the internet, and modern technologies in daily life. Our focus is on practical usage, digital awareness, and building the confidence needed to succeed in today’s digital world.</p>
+      </div>
+      <div class="card mission-card">
+        <div class="mission-icon"><i data-lucide="rocket" class="icon"></i></div>
+        <h3>Career Readiness</h3>
+        <p>Our goal is to prepare students for real-world opportunities by providing the right skills, modern tools, and proper career direction. We guide them to make better decisions and move towards a successful future.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Expertise -->
+<section id="expertise">
+  <div class="max-6xl">
+    <div class="section-head">
+      <span class="eyebrow">Expertise</span>
+      <h2>Programs I lead</h2>
+    </div>
+    <div class="grid-4">
+      <div class="expertise-card">
+        <div class="ex-icon"><i data-lucide="award"></i></div>
+        <h3>MS-CIT Training <br>
+           (MKCL Authorized Trainer)</h3>
+        <p>✔️ Official MKCL syllabus with proper structured learning <br>
+✔️ Practical training to build real computer skills and confidence<br>
+✔️ Step-by-step guidance for exams, projects, and certification</p>
+      </div>
+      <div class="expertise-card">
+        <div class="ex-icon"><i data-lucide="bot"></i></div>
+        <h3>AI & Digital Skills Training</h3>
+        <p>✔️ Learn modern AI tools for faster and smarter work<br>
+✔️ Improve productivity and digital efficiency<br>
+✔️ Hands-on practice with real-world use cases</p>
+      </div>
+      <div class="expertise-card">
+        <div class="ex-icon"><i data-lucide="cpu"></i></div>
+        <h3>Practical Computer Education</h3>
+        <p>✔️ Focus on real-world application, not just theory<br>
+✔️ Regular practice sessions in a computer lab<br>
+✔️ Beginner to advanced level training</p>
+      </div>
+      <div class="expertise-card">
+        <div class="ex-icon"><i data-lucide="briefcase"></i></div>
+        <h3>Student Career Guidance</h3>
+        <p>✔️ Clear direction for choosing the right career path<br>
+✔️ Confidence building and skill development support<br>
+✔️ Guidance based on current industry needs</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USP -->
+<section class="bg-soft">
+  <div class="max-6xl">
+    <div class="usp-grid">
+      <div>
+        <span class="eyebrow">Why VedPad</span>
+        <h2 style="font-size:2.1rem;font-weight:700;margin:.5rem 0 1rem">A small step towards a big future</h2>
+        <p style="color:var(--muted-foreground);font-size:1.4rem">At VedPad Education, we focus on practical learning, experienced guidance, and real-world skills that help students build confidence and achieve long-term success. We believe that true learning goes beyond theory, which is why we emphasize hands-on training, modern tools, and continuous support to ensure every student is prepared for real-life challenges and future opportunities.</p>
+      </div>
+      <div>
+        <div class="usp-item"><div class="usp-check"><i data-lucide="check-circle-2" class="icon"></i></div><span>Experienced Teachers</span></div>
+        <div class="usp-item"><div class="usp-check"><i data-lucide="check-circle-2" class="icon"></i></div><span>Practical Teaching Method</span></div>
+        <div class="usp-item"><div class="usp-check"><i data-lucide="check-circle-2" class="icon"></i></div><span>Real Time learning</span></div>
+        <div class="usp-item"><div class="usp-check"><i data-lucide="check-circle-2" class="icon"></i></div><span>AI &amp; Robotics training included with MS-CIT</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="max-4xl">
+    <div class="contact-card">
+      <div class="blob t"></div>
+      <div class="blob b"></div>
+      <div class="inner">
+        <div class="loc"><i data-lucide="map-pin" class="icon"></i> VedPad Education — Shirur</div>
+        <h2>Let’s build your future together</h2>
+        <p class="lead" style="font-weight: 600;">Confused about what to do next or ready to start learning?
+Contact us today — get proper guidance, practical skills, and a clear path for your future.</p>
+        <a href="tel:8847788710" class="phone">+91 8847788710</a>
+        <div class="cta-row" style="justify-content:center">
+          <a href="tel:8847788710" class="btn btn-secondary btn-lg"><i data-lucide="phone" class="icon"></i> Call Now</a>
+          <a href="https://wa.me/918847788710" target="_blank" rel="noopener" class="btn btn-success btn-lg"><i data-lucide="message-circle" class="icon"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer style="background:#0f172a;color:#e5e7eb;padding:40px 20px 20px 20px;font-family:sans-serif;">
+  
+  <div style="max-width:1100px;margin:auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;">
+    
+    <!-- Left -->
+    <div style="flex:1;min-width:250px;">
+      <h2 style="color:#fff;margin-bottom:10px;">Prajwal Auti</h2>
+      <p style="font-size:14px;line-height:1.6;">
+        Empowering students with practical skills and helping them build a strong digital future.
+      </p>
+    </div>
+
+    <!-- Links -->
+    <div style="flex:1;min-width:200px;">
+      <h3 style="color:#fff;margin-bottom:10px;">Quick Links</h3>
+      <p><a href="#" style="color:#94a3b8;text-decoration:none;">Home</a></p>
+      <p><a href="#" style="color:#94a3b8;text-decoration:none;">About</a></p>
+      <p><a href="#" style="color:#94a3b8;text-decoration:none;">Skills</a></p>
+      <p><a href="#" style="color:#94a3b8;text-decoration:none;">Contact</a></p>
+    </div>
+
+    <!-- Contact -->
+    <div style="flex:1;min-width:250px;">
+      <h3 style="color:#fff;margin-bottom:10px;">Contact</h3>
+      <p style="font-size:14px;">📍 Maharashtra, India</p>
+      <p style="font-size:14px;">📞 +91 8847788710</p>
+      <p style="font-size:14px;">📧 autiprajwal1855@gmail.com</p>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div style="text-align:center;margin-top:30px;border-top:1px solid #1e293b;padding-top:15px;font-size:13px;color:#94a3b8;">
+    © 2026 Prajwal Auti. All rights reserved.
+  </div>
+
+</footer>
+
+<script>
+  // Render Lucide icons
+  lucide.createIcons();
+  // Current year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  // Smooth scroll already handled via CSS scroll-behavior
+</script>
+
+</body>
+</html>
